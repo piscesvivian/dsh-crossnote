@@ -48,4 +48,4 @@ await merge({ source: 'master.md', output: 'book.md' });
 
 ## License
 
-NCSA（与 crossnote 一致）——见 [LICENSE](LICENSE)。
+Apache-2.0——见 [LICENSE](LICENSE)。本插件依赖 crossnote（NCSA 许可），不复制其源码。
