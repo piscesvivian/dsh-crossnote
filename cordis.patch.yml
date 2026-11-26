@@ -1,0 +1,3 @@
+- insert:
+    - id: dsh-crossnote
+      name: '@local/dsh-crossnote'

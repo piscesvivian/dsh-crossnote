@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Crossnote Markdown 合并导出",
+    "description": "基于 MPE @import 语法把多个 Markdown 文件合并导出为单个 .md，支持标题降级与章节改名。",
+    "detail": "docs/PRD.md"
+  }
+}

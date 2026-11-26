@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Crossnote Markdown Merge",
+    "description": "Merge multiple Markdown files into one .md via MPE @import with heading demotion and section renaming.",
+    "detail": "docs/PRD.md"
+  }
+}
