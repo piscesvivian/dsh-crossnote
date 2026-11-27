@@ -1,6 +1,6 @@
 {
   "name": "@local/dsh-crossnote",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "description": "DSH plugin: crossnote/MPE @import preview (.mdx), three-entry export service, and tool detection config. Ordinary .md is untouched.",

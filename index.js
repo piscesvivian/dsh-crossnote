@@ -40,7 +40,7 @@ function textResult(lines) {
 
 export function apply(ctx, config = {}) {
   const cfg = { ...DEFAULT_CONFIG, ...(config || {}) };
-  const service = createCrossnoteService(ctx);
+  const service = createCrossnoteService(cfg);
 
   // 挂载 Host service；cordis 提供多种注册面，逐层降级且全部可选，保证不抛。
   ctx.effect(() => {
