@@ -1,5 +1,11 @@
 node_modules/
-*.log
+verify/node_modules/
+.pnpm-store/
+*.tsbuildinfo
+.env*
 .DS_Store
+Thumbs.db
+*.log
+*.log.*
 verify-output/
 dist/

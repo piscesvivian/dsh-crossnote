@@ -3,15 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "DSH plugin: merge multiple Markdown files into one via crossnote/MPE @import, with heading demotion and section renaming.",
+  "description": "DSH plugin: crossnote/MPE @import preview (.mdx), three-entry export service, and tool detection config. Ordinary .md is untouched.",
   "exports": {
     ".": "./index.js",
+    "./client": "./lib/client.js",
     "./locale/*.json": "./locale/*.json",
     "./icon": "./icon.svg"
   },
   "files": [
     "index.js",
+    "client.js",
     "cordis.patch.yml",
+    "lib/client.js",
+    "lib/index.js",
     "locale/*.json",
     "src/*.js",
     "docs",
@@ -20,11 +24,44 @@
     "LICENSE"
   ],
   "dsh": {
+    "manifestVersion": 1,
     "bundle": {
       "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "locale",
+        "modules",
+        "ui-conversation",
+        "ui-layout",
+        "ui-sidebar",
+        "ui-sidebar-right"
+      ],
+      "immediately": false
     }
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node test/directive.test.js && node test/preprocess.test.js && node test/sideeffects.test.js && node test/detect.test.js"
   },
   "engines": {
     "node": ">=18.17.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "*",
+    "@deepseek-ai/schemastery": "*",
+    "react": "^18.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    },
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    }
   }
 }
